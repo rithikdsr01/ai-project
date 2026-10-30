@@ -1,0 +1,1 @@
+CREATE TABLE documents (id BIGSERIAL PRIMARY KEY, user_id TEXT NOT NULL, case_id BIGINT REFERENCES cases(id) ON DELETE CASCADE, filename TEXT NOT NULL, storage_key TEXT NOT NULL, mime_type TEXT NOT NULL, size_bytes BIGINT NOT NULL DEFAULT 0, status TEXT NOT NULL DEFAULT 'uploaded', created_at TIMESTAMP NOT NULL DEFAULT now());

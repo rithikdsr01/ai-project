@@ -1,0 +1,1 @@
+CREATE TABLE user_settings (id BIGSERIAL PRIMARY KEY, user_id TEXT NOT NULL UNIQUE, firm_name TEXT, role_title TEXT, jurisdiction TEXT DEFAULT 'India', created_at TIMESTAMP NOT NULL DEFAULT now(), updated_at TIMESTAMP NOT NULL DEFAULT now());

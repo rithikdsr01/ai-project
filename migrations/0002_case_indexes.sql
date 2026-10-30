@@ -1,0 +1,1 @@
+CREATE INDEX idx_cases_user_id_created_at ON cases(user_id, created_at DESC);

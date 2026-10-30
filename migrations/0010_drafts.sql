@@ -1,0 +1,1 @@
+CREATE TABLE legal_drafts (id BIGSERIAL PRIMARY KEY, user_id TEXT NOT NULL, case_id BIGINT REFERENCES cases(id) ON DELETE SET NULL, title TEXT NOT NULL, draft_type TEXT NOT NULL, instructions TEXT, content TEXT NOT NULL DEFAULT '', status TEXT NOT NULL DEFAULT 'Draft', created_at TIMESTAMP NOT NULL DEFAULT now(), updated_at TIMESTAMP NOT NULL DEFAULT now());

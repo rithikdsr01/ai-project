@@ -1,0 +1,1 @@
+CREATE TABLE cases (id BIGSERIAL PRIMARY KEY, user_id TEXT NOT NULL, title TEXT NOT NULL, case_number TEXT, court TEXT, status TEXT NOT NULL DEFAULT 'Researching', summary TEXT, created_at TIMESTAMP NOT NULL DEFAULT now(), updated_at TIMESTAMP NOT NULL DEFAULT now());

@@ -1,0 +1,1 @@
+CREATE TABLE saved_research (id BIGSERIAL PRIMARY KEY, user_id TEXT NOT NULL, title TEXT NOT NULL, case_name TEXT, citation TEXT, court TEXT, source_url TEXT, explanation TEXT, relevance_score NUMERIC(5,2), judgment_date DATE, created_at TIMESTAMP NOT NULL DEFAULT now());

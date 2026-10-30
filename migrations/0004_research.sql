@@ -1,0 +1,1 @@
+CREATE TABLE research_history (id BIGSERIAL PRIMARY KEY, user_id TEXT NOT NULL, query TEXT NOT NULL, result_count INTEGER NOT NULL DEFAULT 0, created_at TIMESTAMP NOT NULL DEFAULT now());

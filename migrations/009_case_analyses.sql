@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS case_analyses (
+  id BIGSERIAL PRIMARY KEY,
+  user_id TEXT NOT NULL,
+  case_id BIGINT NOT NULL REFERENCES cases(id) ON DELETE CASCADE,
+  analysis JSONB NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+)

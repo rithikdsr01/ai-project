@@ -1,0 +1,51 @@
+[auth]
+enabled = true
+
+[ai]
+required = true
+description = "JurisAI AI provider for legal research, case analysis, and document intelligence."
+
+[[secret]]
+name = "INDIANKANOON_API_TOKEN"
+label = "Indian Kanoon API token"
+expose = true
+
+[db.tables.cases]
+read = "own"
+write = "own"
+
+[db.tables.documents]
+read = "own"
+write = "own"
+
+[db.tables.research_history]
+read = "own"
+write = "own"
+
+[db.tables.saved_research]
+read = "own"
+write = "own"
+
+[db.tables.notes]
+read = "own"
+write = "own"
+
+[db.tables.user_settings]
+read = "own"
+write = "own"
+
+[db.tables.legal_sources]
+read = "member"
+write = "member"
+
+[db.tables.case_analyses]
+read = "own"
+write = "own"
+
+[db.tables.document_analyses]
+read = "own"
+write = "own"
+
+[db.tables.legal_drafts]
+read = "own"
+write = "own"

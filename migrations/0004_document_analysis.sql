@@ -1,0 +1,1 @@
+CREATE TABLE document_analyses (id BIGSERIAL PRIMARY KEY, document_id BIGINT NOT NULL REFERENCES documents(id) ON DELETE CASCADE, user_id TEXT NOT NULL, analysis JSONB NOT NULL, chunks_indexed INTEGER NOT NULL DEFAULT 0, disclaimer TEXT NOT NULL, created_at TIMESTAMP NOT NULL DEFAULT now(), updated_at TIMESTAMP NOT NULL DEFAULT now(), UNIQUE(document_id));
